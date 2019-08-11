@@ -1,10 +1,10 @@
 class EmailAddressParser 
-  attr_accessor :emails 
-  def initialize(emails)
-    @emails =emails 
+  attr_accessor :email_list 
+  def initialize(email_list)
+    @email_list =email_list 
   end 
   def parse
-    	@emails = @emails.gsub(/[\s,]/ ," ").split
-		@emails.uniq
+    	@email_list = @email_list.gsub(/[\s,]/ ," ").split
+		@email_list.uniq
 	end
 end 

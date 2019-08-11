@@ -4,7 +4,10 @@ class EmailAddressParser
     @emails =emails 
   end 
   def parse(emails)
-    emails.split("'") 
+    emails.split.collect do |address|
+      address.split(',') 
+    end
+    .flatten.uniq 
   end 
-    
+end 
 end 
